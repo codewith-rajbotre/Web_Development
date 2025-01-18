@@ -1,0 +1,16 @@
+p{
+    color:blue;
+    background:white;
+}
+div{
+    color:gray;
+    background:black;
+    justify-content: center;
+}
+#one{
+    color:orangered;
+    background-color: aliceblue;
+}
+body {
+    background-color:aqua;
+}

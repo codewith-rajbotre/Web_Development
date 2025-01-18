@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS selectors</title>
+    <style>
+    /* element selector*/
+    div{
+      /*  background-color: red;*/
+    }
+    /*class selector*/
+    .re{
+        background-color: red;
+    }
+    /*id selector*/
+    #green{
+        background-color: green;
+    }
+    /*child selector*/
+    div>p{
+        color:aliceblue;
+        background-color: blueviolet;
+    }
+
+/*Decendent selector*/
+div p{
+    color:aqua;
+    background-color: brown;
+}
+/* Universal Selector*/
+*{
+    margin: 0;
+    padding: 0;
+
+}
+/*Pseudo Selector*/
+a:visited{
+    color:orange;
+}
+a:link{
+    color:aqua;
+}
+a:active{
+    background-color: red;
+}
+div:hover{
+    background-color: yellow;
+}
+p:first-child{
+    background-color: violet;
+}
+
+
+    </style>
+</head>
+<body>
+   <div id="green">
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dolorum similique, quo neque quisquam sapiente vel ullam nihil aut deserunt voluptates cumque nisi sequi animi expedita tenetur blanditiis architecto? Distinctio.
+    </p>
+    I am a div.
+    </div> 
+    <div class="re">
+     I am a div2.
+    </div>
+    <div>
+        <article>
+             <span>
+                 <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error minima voluptas, aliquid ipsa blanditiis quae nisi dolor eligendi consequatur totam, esse molestias amet at non a placeat adipisci distinctio natus?
+                 </p>
+             </span>
+        </article>
+    </div>
+  
+    <div>
+  
+  <a href="https://www.google.com">Go to google</a>
+    </div>
+</body>
+</html>
