@@ -6,7 +6,7 @@ app.use(express.static("public"))
 app.get('/', (req , res)=>{
     res.send("Hello World")
 })
-app.post('/',(req,res)=>{
+app.post('/',(req, res)=>{
    console.log("We are trying post request")
    res.send("Hello world POST")
 })
