@@ -1,34 +1,21 @@
-import { useState } from 'react'
-import { useEffect } from 'react'
+import { useState,useEffect,useRef } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Navbar from './components/Navbar'
 
 function App() {
-   const [count, setCount] = useState(0)
-   const [first, setfirst] = useState(0)
-   const [color, setcolor] = useState(0)
- 
-  //case 1:Run on every Render
-  // useEffect(()=>{
-  //   alert("Welcome to my Main App")
-  // })
-  // //case 2 : Run only on first render
-  // useEffect(()=>{
-  //   alert("First Count was Changed")
-  // },[first])
-  // //case 3 : Run only when the certain value is changed .
-  useEffect(()=>{
-    alert("Count was Changed")
-    setcolor(color+1)
-  },[count])
-
+  const [count, setCount] = useState(0)
+  // let a=0;
+  const a = useRef(0)
+  useEffect(() => {
+   a.current=a.current + 1
+    console.log("rerendering...")
+    console.log(`The value of a while rerendering is ${a.current}`)
+  })
   
 
   return (
     <>
-    <Navbar color={"navy"+ "blue" + color}/>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
