@@ -1,16 +1,38 @@
-const myPromise = new Promise((resolve, reject) => {
-  let success = true;
+// let promise = new Promise((resolve, reject)=>{
+//         console.log("I am a promise");
+// })
+// console.log(promise);
 
-  setTimeout(() => {
-    if (success) {
-      resolve("✅ Data fetched successfully!");
-    } else {
-      reject("❌ Failed to fetch data.");
-    }
-  }, 2000); // simulate async task (like API call)
+
+const getPromise = ()=>{
+   return new Promise((resolve, reject)=>{
+    console.log("I am a Promise");
+    // resolve("success");
+    reject("error Comes");
+
+  });
+};
+
+let promise = getPromise();
+promise.then((res)=>{
+  console.log("Promise Fullfilled",res);
 });
 
-myPromise
-  .then(result => console.log(result))   // when resolved
-  .catch(error => console.log(error))    // when rejected
-  .finally(() => console.log("Promise finished (success or fail)."));
+promise.catch((err)=>{
+  console.log("error occoured!!", err);
+});
+
+
+//Promise example 
+
+// function getData(getDataId, getNextData){
+//   return new Promise((resolve, reject)=>{
+//          setTimeout(()=>{
+//             console.log("data",getDataId);
+//             resolve("Success")
+//             if(getNextData){
+//               getNextData();
+//             }
+//          },2000);
+//   });
+// }
